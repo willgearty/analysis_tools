@@ -18,7 +18,7 @@
 #' @rdname downloadTime
 #' @export
 # Download timescales from Macrostrat
-downloadTime<-function(Timescale="interational epochs") {
+downloadTime<-function(Timescale="international epochs") {
 	Timescale<-gsub(" ","%20",Timescale)
 	URL<-paste0("https://macrostrat.org/api/v2/defs/intervals?format=csv&timescale=",Timescale)
 	Intervals<-utils::read.csv(URL,header=TRUE)
